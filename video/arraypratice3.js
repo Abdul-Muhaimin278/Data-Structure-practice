@@ -114,7 +114,8 @@
 //   }
 // }
 
-//dsa part2
+//====dsa part2
+
 // function test() {
 //   const numbers = [
 //     5, 12, 8, 21, 34, 55, 3, 9, 16, 42, 27, 33, 14, 19, 23, 44, 51, 6, 11, 18,
@@ -152,7 +153,8 @@
 //   // alert(numgbers);
 // }
 
-//todo dsa3
+//==== dsa3
+
 // function test() {
 //   const numbers = [5, 12, 8, 21, 34, 55, 3, 9, 16];
 //   let position = document.getElementById("demo1").value;
@@ -164,7 +166,7 @@
 // }
 //       test()
 
-//?dsa 4
+//==== dsa 4
 
 // function test() {
 //   const numbers = [5, 12, 8, 21, 34, 55, 3, 9, 16];
@@ -215,7 +217,9 @@
 //  })
 
 // }
-//dsa 4
+
+//====dsa 4
+
 // const array1 = [3, 8, 12, 5, 9];
 // const array2 = [20, 14, 9, 27, 15];
 //  let finalArr = [];
@@ -240,7 +244,7 @@
 
 // console.log("finalArr", finalArr);
 
-//dsa 5
+//==== dsa 5
 // const array1 = [3, 5, 8, 9, 12];
 // const array2 = [9, 14, 15, 20, 27];
 // let final = [];
@@ -265,7 +269,7 @@
 // }
 // console.log(final);
 
-// dsa6
+//==== dsa6
 
 // const numbers = [23, 5, 18, 42, 7, 11, 29, 3, 35, 16, 9, 27, 4, 31, 19];
 // for (let i = 0; i < numbers.length; i++) {
@@ -286,7 +290,7 @@
 // }
 // console.log(numbers);
 
-//dsa 7
+//=== dsa 7
 
 // const numberToBeFactorize = 5;
 
@@ -327,19 +331,18 @@
 //   // let swap = arr[i]
 //   arr[i] = value
 //   console.log("ig");
-  
+
 // }
 // console.log("test");
-
 
 // // console.log(arr);
 // }
 // console.log(arr);
-// let arr2 = [5, 15, 20, 30]; 
+// let arr2 = [5, 15, 20, 30];
 
-// let valueToInsert2 = 25; 
+// let valueToInsert2 = 25;
 
-// let position2 = 3; 
+// let position2 = 3;
 // for(let i=arr2.length-1;i>=position2;i--){
 //   arr2[i+1] = arr2[i]
 //   if(i== position2){
@@ -360,7 +363,6 @@
 // //   // arr3[i+1]=arr3[i]
 // //   if(i == position3){
 // //     arr3[i]=valueToInsert3;
-    
 
 // //   }
 // // }
@@ -369,3 +371,16 @@
 // arr3[arr3.length - 1]=valueToInsert3
 // console.log(arr3);
 
+//==== dsa 8
+
+// console.time("reversal time");
+// const numbers = [23, 5, 18, 42, 7, 11, 29, 3, 35, 16, 9, 27, 4];
+// let start = 0;
+// let end = numbers.length - 1;
+// while (start < end) {
+//   [numbers[start], numbers[end]] = [numbers[end], numbers[start]];
+//   start++;
+//   end--;
+// }
+// console.log(numbers);
+// console.timeEnd("reversal time");
