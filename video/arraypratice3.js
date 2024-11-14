@@ -19,7 +19,7 @@
 //next
 
 //flat array
-// function flatenArray(){
+// function flattenedArray(){
 
 // const nestedStrings = [['hello', 'world'], ['foo', 'bar', ['baz', 'qux']]];
 // let result = []
@@ -40,7 +40,7 @@
 // console.log(result);
 
 // }
-// flatenArray()
+// flattenedArray()
 
 //next
 //find max
@@ -104,7 +104,7 @@
 
 // function test() {
 //   if (Math.sign(input.value) === -1) {
-//     console.log("negative bvalue");
+//     console.log("negative value");
 
 //     alert(numbers[numbers.length - input.value * -1]);
 //   } else if (!Number(input.value)) {
@@ -146,11 +146,11 @@
 
 //   // }
 
-//   let filteredNumns = numbers.filter((num, index) => index !== position);
-//   console.log("filteressssss", filteredNumns);
+//   let filteredNum = numbers.filter((num, index) => index !== position);
+//   console.log("filters", filteredNum);
 
 //   // numbers.length = numbers.length - 1;
-//   // alert(numgbers);
+//   // alert(numbers);
 // }
 
 //==== dsa3
