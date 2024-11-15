@@ -424,40 +424,77 @@
 
 // dsa 11 Stack Pop and Push with DOM Inputs and buttons
 
-const stack = [];
-let currentLength = stack.length;
-const maxLength = 5;
+// const stack = [];
+// let currentLength = stack.length;
+// const maxLength = 5;
 
-const push = () => {
-  let input = document.getElementById("stackElement");
-  const value = Number(input.value);
+// const push = () => {
+//   let input = document.getElementById("stackElement");
+//   const value = Number(input.value);
 
-  if (!Number(value)) {
-    alert("Please enter a number");
-    input.value = "";
-  } else if (currentLength < maxLength) {
-    stack[currentLength] = value;
-    currentLength += 1;
-    console.log(stack);
-    input.value = "";
-  } else {
-    alert(`Stack is full. You cannot add ${value}`);
-    input.value = "";
+//   if (!Number(value)) {
+//     alert("Please enter a number");
+//     input.value = "";
+//   } else if (currentLength < maxLength) {
+//     stack[currentLength] = value;
+//     currentLength += 1;
+//     console.log(stack);
+//     input.value = "";
+//   } else {
+//     alert(`Stack is full. You cannot add ${value}`);
+//     input.value = "";
+//   }
+// };
+
+// const pop = () => {
+//   if (currentLength > 0) {
+//     currentLength -= 1;
+//     const poppedValue = stack[currentLength];
+//     stack.length = currentLength;
+//     alert(`${poppedValue} has been removed from [${stack}]`);
+//   } else {
+//     alert("Stack is empty can't pop");
+//     return null;
+//   }
+// };
+// const display = () => {
+//   alert(`[${stack}]`);
+// };
+// console.log(stack);
+
+//==== dsa 10 reverse strings by using stack
+
+const reverseArrayOfString = () => {
+  const strings = ["apple", "banana", "cherry", "date", "elderberry"];
+  const stack = [];
+  let stackLen = stack.length;
+
+  const push = (value) => {
+    stack[stackLen] = value;
+    stackLen += 1;
+  };
+
+  const pop = () => {
+    stackLen -= 1;
+    const poppedValue = stack[stackLen];
+    stack.length = stackLen;
+    return poppedValue;
+  };
+
+  for (let i = 0; i < strings.length; i++) {
+    let string = strings[i];
+
+    let poppedString = "";
+
+    for (let char of string) {
+      push(char);
+    }
+    while (stackLen > 0) {
+      poppedString += pop();
+    }
+    strings[i] = poppedString;
   }
+  return strings;
 };
 
-const pop = () => {
-  if (currentLength > 0) {
-    currentLength -= 1;
-    const poppedValue = stack[currentLength];
-    stack.length = currentLength;
-    alert(`${poppedValue} has been removed from [${stack}]`);
-  } else {
-    alert("Stack is empty can't pop");
-    return null;
-  }
-};
-const display = () => {
-  alert(`[${stack}]`);
-};
-console.log(stack);
+console.log(reverseArrayOfString());
