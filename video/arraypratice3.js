@@ -146,11 +146,11 @@
 
 //   // }
 
-//   let filteredNumns = numbers.filter((num, index) => index !== position);
-//   console.log("filteressssss", filteredNumns);
+//   let filteredNums = numbers.filter((num, index) => index !== position);
+//   console.log("filters", filteredNums);
 
 //   // numbers.length = numbers.length - 1;
-//   // alert(numgbers);
+//   // alert(numbers);
 // }
 
 //==== dsa3
@@ -234,7 +234,7 @@
 // finalArr.concat(array1, array2);
 // for (let i = 0; i < array1.length; i++) {
 //   finalArr[i] = array1[i];
-// **  finalArr.push(array1[i]);
+//   finalArr.push(array1[i]);
 // }
 // for (let i = 0; i < array2.length; i++) {
 //   finalArr.push(array2[i]);
