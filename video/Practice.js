@@ -218,7 +218,7 @@
 
 // }
 
-//====dsa 4
+//====dsa 5
 
 // const array1 = [3, 8, 12, 5, 9];
 // const array2 = [20, 14, 9, 27, 15];
@@ -244,7 +244,7 @@
 
 // console.log("finalArr", finalArr);
 
-//==== dsa 5
+//==== dsa 6
 // const array1 = [3, 5, 8, 9, 12];
 // const array2 = [9, 14, 15, 20, 27];
 // let final = [];
@@ -269,7 +269,7 @@
 // }
 // console.log(final);
 
-//==== dsa6
+//==== dsa 7
 
 // const numbers = [23, 5, 18, 42, 7, 11, 29, 3, 35, 16, 9, 27, 4, 31, 19];
 // for (let i = 0; i < numbers.length; i++) {
@@ -290,7 +290,7 @@
 // }
 // console.log(numbers);
 
-//=== dsa 7
+//=== dsa 8
 
 // const numberToBeFactorize = 5;
 
@@ -371,7 +371,7 @@
 // arr3[arr3.length - 1]=valueToInsert3
 // console.log(arr3);
 
-//==== dsa 8
+//==== dsa 9
 
 // console.time("reversal time");
 // const numbers = [23, 5, 18, 42, 7, 11, 29, 3, 35, 16, 9, 27, 4];
@@ -384,3 +384,80 @@
 // }
 // console.log(numbers);
 // console.timeEnd("reversal time");
+
+//dsa 10 stack,stack Pop Push
+
+// const stack = [];
+// let currentLength = stack.length;
+// let maxLength = 5;
+
+// const push = (value) => {
+//   if (currentLength < maxLength) {
+//     stack[currentLength] = value;
+//     currentLength += 1;
+//   } else {
+//     alert("Stack is full. you can not add " + value);
+//   }
+// };
+// const pop = () => {
+//   if (currentLength > 0) {
+//     currentLength -= 1;
+//     stack.length = currentLength;
+//   } else {
+//     alert("Stack is empty.");
+//   }
+// };
+
+// // testCases
+// push(20);
+// push(30);
+// pop();
+// pop();
+
+// push(245);
+// push(232);
+// push(3);
+// push(33);
+// push(53);
+
+// console.log(stack);
+
+// dsa 11 Stack Pop and Push with DOM Inputs and buttons
+
+const stack = [];
+let currentLength = stack.length;
+const maxLength = 5;
+
+const push = () => {
+  let input = document.getElementById("stackElement");
+  const value = Number(input.value);
+
+  if (!Number(value)) {
+    alert("Please enter a number");
+    input.value = "";
+  } else if (currentLength < maxLength) {
+    stack[currentLength] = value;
+    currentLength += 1;
+    console.log(stack);
+    input.value = "";
+  } else {
+    alert(`Stack is full. You cannot add ${value}`);
+    input.value = "";
+  }
+};
+
+const pop = () => {
+  if (currentLength > 0) {
+    currentLength -= 1;
+    const poppedValue = stack[currentLength];
+    stack.length = currentLength;
+    alert(`${poppedValue} has been removed from [${stack}]`);
+  } else {
+    alert("Stack is empty can't pop");
+    return null;
+  }
+};
+const display = () => {
+  alert(`[${stack}]`);
+};
+console.log(stack);
