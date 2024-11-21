@@ -12,8 +12,25 @@
 //* Note:
 //? If the input string is empty or contains only whitespace, the function should return an false.
 //? The function should ignore leading and trailing whitespace when determining the longest word.
-console.log(
-  findLongestWord(
-    "Watch Thapa Technical javascript awesomethapatechnical course on youtube"
-  )
-);
+// const findLongestWord = (s) => {
+//   if (s.trim().length === 0) {
+//     return false;
+//   }
+//   let arr = s.split(" ");
+  //   let longest = "";
+  //   let len = 0;
+  //   for (let i of arr) {
+  //     if (i.length > len) {
+  //       len = i.length;
+  //       longest = i;
+  //     }
+  //   }
+  //   return longest;\
+//   arr = arr.reduce((acc, curr) => (curr.length > acc.length ? curr : acc));
+//   return arr;
+// };
+// console.log(
+//   findLongestWord(
+//     "Watch Thapa Technical javascript awesomethapatechnical course on youtube"
+//   )
+// );
