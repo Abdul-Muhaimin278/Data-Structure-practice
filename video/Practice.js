@@ -464,37 +464,38 @@
 
 //==== dsa 10 reverse strings by using stack
 
-const reverseArrayOfString = () => {
-  const strings = ["apple", "banana", "cherry", "date", "elderberry"];
-  const stack = [];
-  let stackLen = stack.length;
+// const reverseArrayOfString = () => {
+//   const strings = ["apple", "banana", "cherry", "date", "elderberry"];
+//   console.log(strings);
+//   const stack = [];
+//   let stackLen = stack.length;
 
-  const push = (value) => {
-    stack[stackLen] = value;
-    stackLen += 1;
-  };
+//   const push = (value) => {
+//     stack[stackLen] = value;
+//     stackLen += 1;
+//   };
 
-  const pop = () => {
-    stackLen -= 1;
-    const poppedValue = stack[stackLen];
-    stack.length = stackLen;
-    return poppedValue;
-  };
+//   const pop = () => {
+//     stackLen -= 1;
+//     const poppedValue = stack[stackLen];
+//     stack.length = stackLen;
+//     return poppedValue;
+//   };
 
-  for (let i = 0; i < strings.length; i++) {
-    let string = strings[i];
+//   for (let i = 0; i < strings.length; i++) {
+//     let string = strings[i];
 
-    let poppedString = "";
+//     let poppedString = "";
 
-    for (let char of string) {
-      push(char);
-    }
-    while (stackLen > 0) {
-      poppedString += pop();
-    }
-    strings[i] = poppedString;
-  }
-  return strings;
-};
+//     for (let char of string) {
+//       push(char);
+//     }
+//     while (stackLen > 0) {
+//       poppedString += pop();
+//     }
+//     strings[i] = poppedString;
+//   }
+//   return strings;
+// };
 
-console.log(reverseArrayOfString());
+// console.log(reverseArrayOfString());
