@@ -34,7 +34,7 @@
 //     "Watch Thapa Technical javascript awesomethapatechnical course on youtube"
 //   )
 // );
-// --------------------------------------------------------------------------
+
 //*-------------------------------------------
 //* 2: Programming Question: Hash Tag Generator
 //*-------------------------------------------
@@ -57,7 +57,6 @@
 
 // console.log(generateHash("my name is thapa technical"));
 
-//------------------------------------------------------------------
 //*---------------------------------------------------------
 //*  Interview Question: Count Occurrences of Character
 //*---------------------------------------------------------
@@ -66,14 +65,10 @@
 //? Write a function called countChar that takes two parameters: a string and a character to count. The function should return the number of times the specified character appears in the string.
 
 const countChar = (word, char) => {
-  // let count = 0;
   let regex = new RegExp(char, "gi");
   let matched = word.match(regex);
   console.log(matched);
 
-  // if (word.includes(/char/gi)) {
-  //   count++;
-  // }
   return matched.length;
 };
 
