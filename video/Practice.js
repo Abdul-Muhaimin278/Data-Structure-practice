@@ -500,7 +500,6 @@
 
 // console.log(reverseArrayOfString());
 
-
 // let number = 1234567890;
 // const checkNumber = (num) => {
 //   let numstr = String(num);
@@ -516,3 +515,38 @@
 // number.sort((a, b) => b - a);
 
 // console.log(number[1]);
+
+// ==== dsa 13 stack with js Classes
+
+class Stack {
+  storage = [];
+  curLen;
+  maxLen;
+  constructor(len) {
+    this.maxLen = len;
+    this.curLen = this.storage.length;
+  }
+  push(val) {
+    if (this.curLen < this.maxLen) {
+      this.storage[this.curLen] = val;
+      this.curLen++;
+    } else {
+      alert("Stack is full.");
+    }
+  }
+  pop() {
+    if (this.curLen > 0) {
+      // popped = this.storage[this.maxLen - 1];
+      this.curLen--;
+      this.storage.length = this.curLen;
+    } else {
+      alert("Stack is already empty.");
+    }
+  }
+  display() {
+    console.log(this.storage);
+  }
+}
+
+firstStack = new Stack(5);
+firstStack.display();
