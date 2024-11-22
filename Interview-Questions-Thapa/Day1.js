@@ -82,7 +82,7 @@
 //---------------------------------------------------------------------
 
 //*---------------------------------------------------------
-//*  Interview Question:
+//*  Interview Question: check the the type of triangle
 //*---------------------------------------------------------
 //? Write a function called checkTriangleType that takes three parameters representing the lengths of the sides of a triangle. The function should return a string indicating the type of triangle: "equilateral", "isosceles", or "scalene".
 
