@@ -131,24 +131,58 @@
 //*  Programming Question: Check a palindrome
 //*-------------------------------------------
 // ? Write a function to determine whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characrters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
-const isPalindrome = (str) => {
-  str = str.toLowerCase();
-  str = str.replace(/[\s.,!?;:'"-]+/g, "");
-  let reverse = str.split(" ").reverse().join("");
-  //   console.log(reverse);
+// const isPalindrome = (str) => {
+//   str = str.toLowerCase();
+//   str = str.replace(/[\s.,!?;:'"-]+/g, "");
+//   let reverse = str.split(" ").reverse().join("");
+//   //   console.log(reverse);
 
-  if (reverse === str) return true;
-  return false;
-};
+//   if (reverse === str) return true;
+//   return false;
+// };
 // Example usage:
-console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
-console.log(isPalindrome("racecar")); // Output: true
-console.log(isPalindrome("hello")); // Output: false
+// console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+// console.log(isPalindrome("racecar")); // Output: true
+// console.log(isPalindrome("hello")); // Output: false
 //-------------------------------------------
-//  Contraints
+// * Contraints
 //-------------------------------------------
 // The input string may contain letters, digits, spaces punctuation, and special characters.
 // The function should be case-insensitive, meaning "Racecar" and "racecar" should be considered the same.
 //Ignore spaces, punctation and special character when determing if a string is a palindrome.
 // the function should return true if the input string is a palindrome and false otherwise
-//// Without a comparator function, the sort method sorts the array elements as strings by default, which might not always yield the correct numeric sorting, especially for numbers with more than one digit
+//?Note
+//.replace(/\W/g,"") : Uses the replace() method with a regular expresion (/\W/g)
+// to remove all non-word charatters from string . Here:
+//\W matches any non-word character equivalent to [^a-zA-Z0-9_]
+//The g flag perfom global search , meaning it replace all occurrences of non-word charatcers in the string
+//So , replace (/\W/g,"") replaces all non-word character with an empty string , effictively removing them from the string
+
+//--------------------------------------------------------
+//*-------------------------------------------
+//*  Programming Question: Find the Maximum number in a number
+//*-------------------------------------------
+// //? Write a function findMax that takes an array of number as input and returns the maxium no in the array
+
+// const findMax = (arr) => {
+//   arr = Math.max(...arr);
+//   return arr;
+// };
+
+// console.log(findMax([1, 5, 3, 9, 2]));
+// console.log(findMax([-10, -5, -3, -9, -2]));
+// console.log(findMax([5]));
+
+//*-------------------------------------------
+//*  Programming Question: Factorial Finder
+//*-------------------------------------------
+
+// ? Write a function factorial that takes a non-negative integer num as input and returns its integer n, denoted as n!, is the product of all positive integers less than or equal to n. The factorial of 0 is defined as 1.
+// const factorial = (num) => {
+//   if (num <= 0) return 1;
+//   num = num * factorial(num - 1);
+//   return num;
+// };
+// console.log(factorial(5));
+// console.log(factorial(0));
+// console.log(factorial(3));
