@@ -132,19 +132,16 @@
 //*-------------------------------------------
 // ? Write a function to determine whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
 // const isPalindrome = (str) => {
-//   str = str.toLowerCase();
-//   str = str.replace(/[\s.,!?;:'"-]+/g, "");
-//   let reverse = str.split(" ").reverse().join("");
-//   //   console.log(reverse);
+//   str = str.toLowerCase().replace(/[\s.,!?;:'"-]+/g, "");
+//   let reverse = str.split("").reverse().join("");
 
-//   if (reverse === str) return true;
-//   return false;
+//   return reverse === str;
 // };
-// Example usage:
+// // Example usage:
 // console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
 // console.log(isPalindrome("racecar")); // Output: true
 // console.log(isPalindrome("hello")); // Output: false
-//-------------------------------------------
+
 //*  Constraints
 //-------------------------------------------
 // The input string may contain letters, digits, spaces punctuation, and special characters.
@@ -157,10 +154,27 @@
 //*-------------------------------------------
 //? Write a function called calculateAverage that takes an array of numbers as input and returns thee average of those numbers.
 
-const calculateAverage = (arr) => {
-  let sum = arr.reduce((acc, num) => acc + num, 0);
-  return Math.round(sum / arr.length);
-};
+// const calculateAverage = (arr) => {
+//   let sum = arr.reduce((acc, num) => acc + num, 0);
+//   return Math.round(sum / arr.length);
+// };
 
-console.log(calculateAverage([5, 10, 2, 8])); //Output: 6.
-console.log(calculateAverage([32, 33, -2, 8])); // Output: 18.
+// console.log(calculateAverage([5, 10, 2, 8])); //Output: 6.
+// console.log(calculateAverage([32, 33, -2, 8])); // Output: 18.
+
+//*-------------------------------------------
+//*  Programming Question: Two arrays are equal
+//*-------------------------------------------
+
+//? write a function arraysAreEqual to check if two arrays of numbers arr1, arr2 are equal(i.e., contain same elements on same order) and false otherwise.
+const arraysAreEqual = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return false;
+  return arr1.every((value, index) => value === arr2[index]);
+};
+console.log(arraysAreEqual([1, 2, 3], [1, 2, 3])); // true
+console.log(arraysAreEqual([1, 2, 3], [1, 5, 4])); // false
+console.log(arraysAreEqual([], [])); // true
+//Note
+// The function should return false if arrays have different length.
+// The function should compare each element of arr1 with corresponding element in arr2.
+// The function should only return true if all elements in arr1 and arr2 are equal to their corresponding element in arr2.
