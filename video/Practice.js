@@ -499,3 +499,20 @@
 // };
 
 // console.log(reverseArrayOfString());
+
+
+// let number = 1234567890;
+// const checkNumber = (num) => {
+//   let numstr = String(num);
+//   let arr = [];
+//   for (let i of numstr) {
+//     arr.push(Number(i));
+//   }
+//   console.log(arr);
+// };
+// checkNumber(number);
+
+// let number = [12, 35, 1, 10, 34, 1];
+// number.sort((a, b) => b - a);
+
+// console.log(number[1]);
